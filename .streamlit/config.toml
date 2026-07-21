@@ -1,0 +1,15 @@
+[theme]
+# Cor principal (usada em botões, links e detalhes ativos)
+primaryColor = "#306359"
+
+# Cor de fundo da página principal
+backgroundColor = "#FFFFFF"
+
+# Cor de fundo da barra lateral e de cartões/expansores
+secondaryBackgroundColor = "#F0F2F6"
+
+# Cor padrão do texto
+textColor = "#2C3E50"
+
+# Fonte padrão do aplicativo
+font = "sans serif"
