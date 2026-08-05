@@ -190,7 +190,7 @@ with col_financeiro:
             st.write("**Senha:**")
             st.code(obter_secret("PROPOSTA_PASS", "senha_padrao"), language="text")
 
-# Sistema 8: Gerador de NDA
+# Sistema 9: Gerador de NDA
     with st.expander("✍️ Sistema de Geração de NDA (Comercial)"):
         st.write("**Tipo de Acesso:** Web")
         st.write("**Link do Sistema:** [Acessar Painel Autentique](https://painel.autentique.com.br/documentos/todos)")
@@ -210,6 +210,27 @@ with col_financeiro:
         with col_pass:
             st.write("**Senha:**")
             st.code(obter_secret("AUTENTIQUE_PASS", "senha_padrao"), language="text")
+
+# Sistema 7: Painel UOL HOST
+    with st.expander("✍️ Gestão de Usuários (E-mails Uol)"):
+            st.write("**Tipo de Acesso:** Web")
+            st.write("**Link do Sistema:** [Acessar Painel UOL](https://meupainelhost.uol.com.br/)")
+            st.write("**Responsável Principal:** Equipe Planejamento")
+            st.write("**Suporte Técnico:** UOL")
+            st.info("💡 *Este sistema pode ser acessado de qualquer computador ou celular com internet.*")
+        
+        # MOLDE DE CREDENCIAIS (Basta mudar a chave do secret!)
+            st.markdown("---")
+            st.caption("🔑 **Credenciais de Acesso da Gestão**")
+        
+            col_user, col_pass = st.columns(2)
+            with col_user:
+                st.write("**Usuário:**")
+                st.code(obter_secret("UOL_USER", "usuario_padrao"), language="text")
+                
+            with col_pass:
+                st.write("**Senha:**")
+                st.code(obter_secret("UOL_PASS", "senha_padrao"), language="text")
 
 # Sistema 7: Power BI
     with st.expander("📊 Power BI (Painéis de Gestão)"):
