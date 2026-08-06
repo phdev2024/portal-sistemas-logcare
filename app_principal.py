@@ -152,6 +152,7 @@ with col_financeiro:
     with st.expander("🧾 Sistema de Faturas (Financeiro / Bases)"):
         st.write("**Tipo de Acesso:** Web")
         st.write("**Link direto:** [Acessar Sistema de Faturas](https://logcarebasefatura.pythonanywhere.com/)")
+        st.write("**Link da Nuvem (Hospedagem):** [Servidor](https://appsistemaslogcare.streamlit.app/)")
         st.write("**Responsável Principal:** Departamento Financeiro")
         st.write("**Suporte Técnico:** Paulo")
         st.info("💡 *Este sistema pode ser acessado de qualquer computador ou celular com internet.*")
@@ -167,6 +168,15 @@ with col_financeiro:
         with col_pass:
             st.write("**Senha:**")
             st.code(obter_secret("FINANCEIRO_PASS", "senha_padrao_123"), language="text")
+
+        col_user, col_pass = st.columns(2)
+        with col_user:
+            st.write("**Usuário:**")
+            st.code(obter_secret("AnyWhere_USER", "usuario_gestao"), language="text")
+                    
+        with col_pass:
+                    st.write("**Senha:**")
+                    st.code(obter_secret("AnyWhere_PASS", "senha_padrao_123"), language="text")
 
     # Sistema 6: Gerador de Propostas
     with st.expander("✍️ Gerador de Propostas (Comercial / Gerência)"):
