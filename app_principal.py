@@ -20,7 +20,7 @@ desenhar_header(cor_da_empresa="#069782", caminho_logo="logo.png")
 
 # 4. MENSAGEM DE AUTONOMIA
 st.info(
-    "👋 **Olá, pessoal!** Este portal foi criado para que você tenha total autonomia. "
+    "👋 **Olá, gestores!** Este portal foi criado para que você tenha total autonomia. "
     "Aqui você encontra os links diretos, locais de funcionamento e os responsáveis "
     "de cada sistema da nossa operação, sem a necessidade de acionar a equipe fora do horário."
 )
@@ -121,6 +121,27 @@ with col_operacao:
         with col_pass:
             st.write("**Senha:**")
             st.code(obter_secret("COBLI_PASS", "senha_padrao"), language="text")
+
+    # Sistema : BUONNY CHECK
+    with st.expander("🏷️ Sistema da Gerenciadora de Riscos (Transporte)"):
+        st.write("**Tipo de Acesso:** Web")
+        st.write("**Link do Sistema:** [Acessar BUONNY](https://buonnycheck.buonny.com.br/#/signin)")
+        st.write("**Responsável Principal:** Equipe Transporte")
+        st.write("**Suporte Técnico:** ")
+        st.info("💡 *Este sistema pode ser acessado de qualquer computador ou celular com internet.*")
+    
+    # MOLDE DE CREDENCIAIS (Basta mudar a chave do secret!)
+        st.markdown("---")
+        st.caption("🔑 **Credenciais de Acesso da Gestão**")
+    
+        col_user, col_pass = st.columns(2)
+        with col_user:
+            st.write("**Usuário:**")
+            st.code(obter_secret("BUONNY_USER", "usuario_padrao"), language="text")
+            
+        with col_pass:
+            st.write("**Senha:**")
+            st.code(obter_secret("BUONNY_PASS", "senha_padrao"), language="text")
 
     # Sistema 4: WMS & TMS
     with st.expander("🖥️ WMS / TMS (Sistemas de Base - Locais)"):
@@ -242,10 +263,11 @@ with col_financeiro:
                 st.write("**Senha:**")
                 st.code(obter_secret("UOL_PASS", "senha_padrao"), language="text")
 
-# Sistema 7: Power BI
-    with st.expander("📊 Power BI (Painéis de Gestão)"):
-        st.warning("⏳ **Status: Em Breve**")
-        st.write("Estamos desenvolvendo os painéis unificados de planejamento e gerência.")
+# Sistema 7: Painel de Indicadores
+    with st.expander("📊 Indicadores (Painel de Gestão)"):
+        st.error("⚠️ **Atenção: Sistemas Locais (Servidor Local)**")
+        st.write("**Onde roda:** Em qualquer computador conectado ao link do servidor na empresa.")
+        st.write("**Link do Sistema:** [Acessar Painel Indicadores](http://192.168.1.111:8501)")
         st.write("**Responsável Principal:** Equipe Planejamento")
         st.write("**Suporte Técnico:** Paulo")
 
